@@ -1,0 +1,79 @@
+/* Hide actual dot/checkbox */
+input[type="radio"],
+input[type="checkbox"]
+{
+    position: absolute;
+    opacity: 0;
+    width:15px;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 6px;
+}
+
+/* Styles common to fake dot and checkbox */
+input[type="radio"] + span::before,
+input[type="checkbox"] + span::before
+{
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Styles unique to fake dot (checked or left of checked) */
+input[type="radio"] + span::before
+{
+    content: "•";
+    width: 12px;
+    height: 12px;
+    font-size: 36px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* Styles unique to fake checkbox (unchecked) */
+input[type="checkbox"] + span::before
+{
+    position:relative;
+    content: "";
+    opacity: .25;
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* Styles unique to fake checkbox (checked) */
+input[type="checkbox"]:checked + span::before
+{
+    content: "✖";
+    color: #a00;
+    
+    -moz-box-shadow: 0 0 2px transparent;
+    -webkit-box-shadow: 0 0 2px transparent;
+    box-shadow: 0 0 2px transparent;
+}
+
+/* Remove dot from all radios _after_ selected one */
+input[type="radio"]:checked ~ input[type="radio"] + span::before
+{    
+    content: "";
+}
+
