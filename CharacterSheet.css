@@ -1,79 +1,209 @@
-/* Hide actual dot/checkbox */
-input[type="radio"],
-input[type="checkbox"]
-{
-    position: absolute;
-    opacity: 0;
-    width:15px;
-    cursor: pointer;
-    z-index: 1;
-    margin-top: 6px;
+div[class^="sheet-wildcard1"] {
+	display: none;
+}
+ 
+input.sheet-wildcard1 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
 }
 
-/* Styles common to fake dot and checkbox */
-input[type="radio"] + span::before,
-input[type="checkbox"] + span::before
-{
-    border: solid 1px #a8a8a8;
-    line-height: 14px;
-    text-align: middle;
+span.sheet-wildcard1 {
     display: inline-block;
-    vertical-align: middle;
-    
-    -moz-box-shadow: 0 0 2px #ccc;
-    -webkit-box-shadow: 0 0 2px #ccc;
-    box-shadow: 0 0 2px #ccc;
-    
-    background: #f6f6f6;
-    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
-    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
-    background: radial-gradient(#f6f6f6, #dfdfdf);
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
 }
 
-/* Styles unique to fake dot (checked or left of checked) */
-input[type="radio"] + span::before
-{
-    content: "•";
-    width: 12px;
-    height: 12px;
-    font-size: 36px;
-    
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
+input.sheet-wildcard1:checked + span.sheet-wildcard1 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainFill.png");
+	color: white;
 }
 
-/* Styles unique to fake checkbox (unchecked) */
-input[type="checkbox"] + span::before
-{
-    position:relative;
-    content: "";
-    opacity: .25;
-    width: 14px;
-    height: 14px;
-    font-size: 12px;
-    
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+div[class^="sheet-radio1"] {
+	display: none;
+}
+ 
+input.sheet-radio1 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
 }
 
-/* Styles unique to fake checkbox (checked) */
-input[type="checkbox"]:checked + span::before
-{
-    content: "✖";
-    color: #a00;
-    
-    -moz-box-shadow: 0 0 2px transparent;
-    -webkit-box-shadow: 0 0 2px transparent;
-    box-shadow: 0 0 2px transparent;
+span.sheet-radio1 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
 }
 
-/* Remove dot from all radios _after_ selected one */
-input[type="radio"]:checked ~ input[type="radio"] + span::before
-{    
-    content: "";
+input.sheet-radio1:checked + span.sheet-radio1 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainFill.png");
+	color: white;
 }
 
+div[class^="sheet-radio2"] {
+	display: none;
+}
+ 
+input.sheet-radio2 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-radio2 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+
+input.sheet-radio2:checked + span.sheet-radio2 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainFill.png");
+	color: white;
+}
+
+div[class^="sheet-radio3"] {
+	display: none;
+}
+ 
+input.sheet-radio3 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-radio3 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+
+input.sheet-radio3:checked + span.sheet-radio3 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainFill.png");
+	color: white;
+}
+
+div[class^="sheet-radio4"] {
+	display: none;
+}
+ 
+input.sheet-radio4 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-radio4 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+
+input.sheet-radio4:checked + span.sheet-radio4 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainFill.png");
+	color: white;
+}
+
+div[class^="sheet-radio5"] {
+	display: none;
+}
+ 
+input.sheet-radio5 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-radio5 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+
+input.sheet-radio5:checked + span.sheet-radio5 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_LeftMainFill.png");
+	color: white;
+}
+
+div[class^="sheet-radio6"] {
+	display: none;
+}
+ 
+input.sheet-radio6 {
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+	z-index: 9999;
+}
+
+span.sheet-radio6 {
+    display: inline-block;
+	font-size: 13px;
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainNull.png");
+	color: white;
+	font-weight: bold;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+
+input.sheet-radio6:checked + span.sheet-radio6 {
+	background-image: url("https://raw.githubusercontent.com/lockheart97/MME-TTRPG/refs/heads/main/HalfCircle_RightMainFill.png");
+	color: white;
+}
